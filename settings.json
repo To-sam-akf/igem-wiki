@@ -1,0 +1,10 @@
+{
+  "esversion": 6,
+  "node": true,
+  "browser": true,
+  "globals": {
+    "console": true,
+    "module": true,
+    "document": true
+  }
+}
