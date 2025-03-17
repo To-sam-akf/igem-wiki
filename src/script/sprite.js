@@ -66,7 +66,7 @@ function animateSprite(sprite) {
   ];
 
   // Apply animation
-  const animation = sprite.animate(keyframes, {
+  sprite.animate(keyframes, {
     duration: duration,
     iterations: Infinity,
     easing: "ease-in-out",

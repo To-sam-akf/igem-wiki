@@ -1,22 +1,26 @@
+const TITLE_COLORS = [
+  "red",
+  "green",
+  "blue",
+  "yellow",
+  "purple",
+  "orange",
+  "pink",
+  "brown",
+  "black",
+  "white",
+];
+
 function touching_title() {
-  const colors = [
-    "red",
-    "green",
-    "blue",
-    "yellow",
-    "purple",
-    "orange",
-    "pink",
-    "brown",
-    "black",
-    "white",
-  ];
   const title = document.querySelector(".main-title h1");
-  title.addEventListener("click", () => {
-    // Generate a new random color each time the title is clicked
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    title.style.color = randomColor;
-  });
+  if (!title) return;
+  
+  // 添加过渡效果
+  title.style.transition = "color 1s ease";
+  
+  const randomColor = TITLE_COLORS[Math.floor(Math.random() * TITLE_COLORS.length)];
+  title.style.color = randomColor;
 }
 
-touching_title();
+// 正确的setInterval用法，不带括号
+setInterval(touching_title, 2000);

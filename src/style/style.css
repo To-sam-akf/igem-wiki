@@ -215,6 +215,43 @@ li a:hover::after {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "fir_p bacteria"
+    "sec_p exerllent-subspecies";
+}
+
+.engineering > #first_p {
+  grid-area: fir_p;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.engineering > #sec_p {
+  grid-area: sec_p;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.engineering > #bacteria {
+  grid-area: bacteria;
+}
+
+.engineering > #exerllent-subspecies {
+  grid-area: exerllent-subspecies;
+}
+
+.engineering > div > p {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .bacteria-table {
@@ -226,6 +263,7 @@ li a:hover::after {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
 }
 
 .bacteria-table th,
