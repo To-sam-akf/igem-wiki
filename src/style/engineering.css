@@ -295,6 +295,8 @@ li a:hover::after {
   align-items: center;
   padding: 2rem;
   animation: float 6s ease-in-out infinite;
+  overflow: hidden;
+  position: relative;
 }
 
 .main-title h1 {
@@ -306,4 +308,11 @@ li a:hover::after {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
   line-height: 1.4;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  will-change: transform, opacity;
+  z-index: 2;
 }
