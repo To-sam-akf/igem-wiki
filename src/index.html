@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/scroll-progress.css" />
     <title>Nature's Little Alchemists</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +18,7 @@
       <div class="nav-bar">
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="./index.html">Home</a></li>
             <li class="dropdown">
               <a href="#" class="dropbtn">Team</a>
               <div class="dropdown-content">
@@ -29,6 +30,7 @@
               <a href="#" class="dropbtn">Project</a>
               <div class="dropdown-content">
                 <a href="#">Project Description</a>
+                <a href="./page/engineering.html">Engineering</a>
                 <a href="#">Contribution</a>
               </div>
             </li>
@@ -71,7 +73,7 @@
           Alkanes and Protein Gold
         </h1>
       </div>
-      <div class="main-content">
+      <!-- <div class="main-content">
         <div class="engineering">
           <div id="first_p">
             <p>
@@ -180,10 +182,77 @@
             </tbody>
           </table>
         </div>
-      </div>
+      </div> -->
     </main>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-inner">
+        <!-- 进度条 -->
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- 转化可视化 -->
+        <div class="transformation-container">
+          <div class="molecules-container">
+            <!-- 输入分子 -->
+            <span class="molecule co2" id="co2">CO<sub>2</sub></span>
+            <span class="molecule light" id="light">
+              <svg
+                class="light-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="molecule n2" id="n2">N<sub>2</sub></span>
+
+            <!-- 箭头 -->
+            <span class="arrow">→</span>
+
+            <!-- 输出产物 -->
+            <span class="molecule alkane" id="alkane"
+              >C<sub>n</sub>H<sub>2n+2</sub></span
+            >
+            <span class="molecule protein" id="protein">
+              <svg
+                class="protein-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="molecule gold" id="gold">Au</span>
+          </div>
+
+          <!-- 百分比指示器 -->
+          <div class="percentage-container">
+            <div class="percentage-circle" id="percentageCircle">0%</div>
+            <div class="percentage-text">
+              <div class="percentage-text-title">Nature's Alchemy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./script/createParticle.js"></script>
     <script src="./script/touching_title.js"></script>
     <script src="./script/sprite.js"></script>
+    <script src="./script/scroll-progress.js"></script>
   </body>
 </html>

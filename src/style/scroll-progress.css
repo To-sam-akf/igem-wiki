@@ -1,0 +1,136 @@
+/* 滚动进度指示器容器 */
+.scroll-progress-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 8px 16px;
+  background-color: rgba(178, 235, 242, 0.8);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-progress-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 进度条 */
+.progress-bar-container {
+  height: 8px;
+  width: 100%;
+  background-color: rgba(178, 235, 242, 0.6);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%; /* 初始宽度为0，由JS控制 */
+  border-radius: 999px;
+  transition: width 0.1s ease-out;
+}
+
+/* 转化可视化部分 */
+.transformation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.molecules-container {
+  display: flex;
+  align-items: center;
+}
+
+.molecule {
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-right: 8px;
+  font-family: monospace;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.arrow {
+  margin: 0 8px;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* 分子样式 */
+.co2 {
+  background-color: #006064;
+}
+.light {
+  background-color: #ffd600;
+  color: #5d4037;
+}
+.n2 {
+  background-color: #0d47a1;
+}
+.alkane {
+  background-color: #2e7d32;
+}
+.protein {
+  background-color: #1b5e20;
+}
+.gold {
+  background-color: #ff8f00;
+}
+
+/* 百分比指示器 */
+.percentage-container {
+  display: flex;
+  align-items: center;
+}
+
+.percentage-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #26c6da, #43a047);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.percentage-text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .percentage-text {
+    display: block;
+  }
+
+  .percentage-text-title {
+    color: #1b5e20;
+    font-weight: 600;
+  }
+}
+
+/* 分子中的下标 */
+sub {
+  font-size: 65%;
+  vertical-align: sub;
+}
+
+/* 光图标 */
+.light-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+/* 蛋白质图标 */
+.protein-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}

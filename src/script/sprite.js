@@ -28,7 +28,7 @@ function createRandomSprites(container, count) {
     const spriteImages = ["sprite_1.png", "sprite_2.png"];
     const randomImage =
       spriteImages[Math.floor(Math.random() * spriteImages.length)];
-    sprite.style.backgroundImage = `url('./pic/${randomImage}')`;
+    sprite.style.backgroundImage = `url('../pic/${randomImage}')`;
     sprite.style.backgroundSize = "cover";
 
     // Random opacity
